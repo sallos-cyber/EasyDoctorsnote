@@ -5,3 +5,29 @@ This project is built on the kivy framework using an MVVM pattern and uses build
 
 todo: in buildozer.spec # (str) Path to build artifact storage, absolute or relative to spec file
  build_dir = /media/Data/
+
+
+Project Title:
+DoctorsNote
+
+
+
+Description:
+When your child is sick, it's important to notify the school about their 
+absence, and you may also need to cancel lunch for those days. This app
+simplifies the process by allowing you to select a specific date or 
+date range and automatically send the necessary emails. To use the app,
+you'll need to configure it with an SMTP server and a password. 
+It does not access any information on your phone.
+
+
+Table of Contents
+About
+This app is written in Python using Kivy.
+Features
+Installation
+
+Usage
+Contributing
+License
+

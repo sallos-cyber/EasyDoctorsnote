@@ -1,0 +1,56 @@
+#import topbar.kv
+<StartupScreen>:
+    id: SMS
+    md_bg_color: self.theme_cls.backgroundColor
+    
+    MDBoxLayout:
+        orientation: 'vertical'
+        BareTopBar:
+        
+        MDBoxLayout:
+            padding: [dp(20), dp(40)]  # Use smaller, device-independent pixels
+            spacing: dp(20)  # Reduce spacing
+            orientation: "vertical"
+            
+            MDLabel:
+                text: "The app must be configured before use. Click the cogwheel in the upper left corner and fill in the required information."
+                halign: "center"
+                size_hint_y: None
+                height: self.texture_size[1] + dp(20)  # Dynamically adjust height
+                font_style: "Body"  # Use a smaller font style for mobile screens
+                
+            MDButton:
+                pos_hint: {"center_x": .5}
+                height: "48dp"  # Reduce height for mobile
+                size_hint_x: 0.9  # More responsive size
+                on_press: app.screen_manager.current = "main_screen"
+                
+                MDButtonIcon:
+                    x: text.x - (self.width - dp(10))
+                MDButtonText:
+                    id: text
+                    font_style: "Title"  # Adjust font size
+                    text: "Ok"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    
+        MDBoxLayout:
+            orientation: 'vertical'
+            padding: dp(20)  # Use smaller padding
+            MDBoxLayout:
+                orientation: 'horizontal'
+                padding: dp(20)  # Smaller padding for mobile
+                
+                MDLabel:
+                    id: dn_text
+                    halign: "center"
+                    text: "Don't show this message again"
+                    size_hint_y: None
+                    pos_hint: {'center_x': .3, 'center_y': .5}
+                    font_style: "Label"  # Smaller text for this label
+                    
+                MDCheckbox:
+                    id: 'show_startup_checkbox'
+                    on_active: root.view_model.set_show_startup_checkbox()
+                    size_hint: None, None
+                    size: "36dp", "36dp"  # Reduce size for mobile
+                    pos_hint: {'center_x': .8, 'center_y': .5}

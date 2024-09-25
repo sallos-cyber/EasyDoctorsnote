@@ -1,0 +1,36 @@
+<BareTopBar@MDTopAppBar>:
+    type: "small"
+    size_hint_x: 1
+
+    MDTopAppBarTrailingButtonContainer:
+        MDActionTopAppBarButton:
+            icon: "cog"
+            style: "tonal"
+            on_release: app.open_settings()
+        MDActionTopAppBarButton:
+            on_release: app.stop()
+            icon: "exit-to-app"
+            style: "tonal"
+        
+<BackArrowTopBar@MDTopAppBar>:
+    type: "small"
+    size_hint_x: 1
+    pos_hint: {"center_x": .5, "center_y": .5}
+    MDTopAppBarLeadingButtonContainer:
+        MDActionTopAppBarButton:
+            icon: "arrow-left-bold"
+            style: "tonal"
+            theme_icon_color: "Custom"
+            on_release: app.root.current = root.screen_name
+    MDTopAppBarTitle:
+        text: "     "
+    MDTopAppBarTrailingButtonContainer:
+        MDActionTopAppBarButton:
+            icon: "cog"
+            style: "tonal"
+            on_release: app.open_settings()
+        MDActionTopAppBarButton:
+            on_release: app.stop()
+            icon: "exit-to-app"
+            style: "tonal"
+            

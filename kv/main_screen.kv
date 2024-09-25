@@ -1,0 +1,67 @@
+<MainScreen>:
+    id: MS
+    md_bg_color: self.theme_cls.backgroundColor
+    dn_text:dn_text
+    MDBoxLayout:
+        orientation:'vertical'
+        
+        BareTopBar:
+        MDBoxLayout:
+            padding: 80
+            spacing: 40
+            orientation: "vertical"
+            MDLabel:
+                text: "What would you like to do?"
+                halign: "center"
+                size_hint_y: None
+                font_style: "Title"
+            MDBoxLayout:
+                orientation: 'horizontal'
+                padding: 40
+                MDIcon: 
+                    icon: "doctor"
+                    size_hint_y: None
+                    pos_hint: {'center_x':1, 'center_y':.5}
+                MDLabel:
+                    id: dn_text
+                    halign: "center"
+                    text: "send doctor's note"
+                    size_hint_y: None
+                    pos_hint: {'center_x': .3, 'center_y': .5}
+                MDCheckbox:
+                    id: 'doctor_checkbox'
+                    on_active: root.view_model.set_send_doctors_note()
+                    size_hint: None, None
+                    size: "48dp", "48dp"
+                    pos_hint: {'center_x': .8, 'center_y': .5}       
+            MDBoxLayout:
+                orientation: 'horizontal'
+                padding: 40
+                MDIcon: 
+                    icon: "food-drumstick-off"
+                    size_hint_y: None
+                    pos_hint: {'center_x':1, 'center_y':.5}    
+                MDLabel:
+                    id: dn_text
+                    halign: "center"
+                    theme_text_color: "Secondary"
+                    theme_text_color: "Custom"
+                    #color: app.theme_cls.primaryColor
+                    text: "cancel lunch"
+                    size_hint_y: None
+                    pos_hint: {'center_x': .3, 'center_y': .5}
+                MDCheckbox:
+                    id: 'lunch_checkbox'
+                    on_active: root.view_model.set_cancel_lunch()
+                    size_hint: None, None
+                    size: "48dp", "48dp"
+                    pos_hint: {'center_x': .8, 'center_y': .5}             
+            MDButton:
+                md_bg_color: app.theme_cls.backgroundColor
+                pos_hint: {"center_x":1}                
+                on_release: root.view_model.call_pick_date_screen()
+                MDButtonText:
+                    id: ok_button
+                    text: "ok"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+            BoxLayout:

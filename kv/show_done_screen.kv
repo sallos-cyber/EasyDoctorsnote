@@ -1,0 +1,35 @@
+            
+<ShowDoneScreen>:
+    id: SDS
+    screen_name: 'show_done_screen'
+    md_bg_color: self.theme_cls.backgroundColor
+    
+    MDBoxLayout:
+        orientation:'vertical'
+        BareTopBar:
+        MDBoxLayout:
+            id:button_layout
+            orientation: "vertical"
+            padding: 80
+            spacing: 40
+            
+            MDBoxLayout:
+                
+            MDLabel:
+                text: "You are done!"
+                halign: "center"
+                size_hint_y: None
+                font_style: "Title"
+                role: "medium"
+            MDButton:
+                id:send_button
+                pos_hint: {"center_x":.5}
+                style: "elevated"
+                size_hint_x: .8
+                on_press: app.stop()
+
+                MDButtonText:
+                    text: "exit"
+            MDBoxLayout:
+            
+    

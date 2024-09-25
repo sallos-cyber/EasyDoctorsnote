@@ -1,0 +1,40 @@
+<ShowEmailScreen>:
+    id: SES
+    md_bg_color: self.theme_cls.backgroundColor
+    MDBoxLayout:
+        orientation:'vertical'
+        BackArrowTopBar:
+            screen_name: 'pick_date_screen'
+            
+        MDBoxLayout:
+            id:button_layout
+            orientation: "vertical"
+            padding: 80
+            spacing: 40
+            
+            MDBoxLayout:
+                
+            MDLabel:
+                text: "noch keine Email" if not root.emailtext_to_be_displayed else root.emailtext_to_be_displayed
+                halign: "left"
+                size_hint_y: None
+                font_style: "Title"
+                role: "medium"
+    
+            MDBoxLayout:
+                              
+            MDButton:
+                id:send_button
+                pos_hint: {"center_x":.5}
+                style: "elevated"
+                size_hint_x: .8
+                #on_press: self.parent.remove_widget(self)
+                on_release: root.view_model.send_curr_email()
+                MDButtonIcon:
+                    x: text.x - (self.width - dp(10))
+                MDButtonText:
+                    id: text
+                    #text: "send to "+app.config['emailconfig']['receiveremails_doctorsnote']
+                    text: "recipient undefined" if not root.email_curr else "send to "+root.email_curr['To']+(" " if not root.email_curr['Cc'] else "    "+root.email_curr['Cc'])
+
+                    pos_hint: {"center_x": .5, "center_y": .5}

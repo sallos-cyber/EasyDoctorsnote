@@ -1,0 +1,35 @@
+
+            
+<PickDateScreen>:
+    id: PDS
+    md_bg_color: self.theme_cls.backgroundColor
+    MDBoxLayout:
+        orientation:'vertical'
+        BackArrowTopBar:
+            screen_name: 'main_screen'           
+        MDBoxLayout:
+            padding: 80
+            spacing: 40
+            orientation: "vertical"    
+            MDButton:
+                pos_hint: {"center_x":.5}
+                style: "elevated"
+                theme_width: "Custom"
+                height: "56dp"
+                size_hint_x: .8
+                on_release: root.show_modal_date_picker()          
+                     
+                MDButtonIcon:
+                    x: text.x - (self.width - dp(10))
+                MDButtonText:
+                    id: text
+                    font_style: "Title"
+                    text: "Pick a date"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    
+                
+        BoxLayout:    
+ 
+                       
+
+       

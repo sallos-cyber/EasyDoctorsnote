@@ -1,0 +1,86 @@
+[
+    {
+        "type": "string",
+        "title": "sender email",
+        "desc": "set the email address of the sender",
+        "section": "emailconfig",
+        "key": "senderemail"
+    },
+    {
+        "type": "string",
+        "title": "receiver email doctorsnote cc",
+        "desc": "comma separated email addresses of receivers in cc, e.g. klassenlehrer@kkos.net,jane@school.com",
+        "section": "emailconfig",
+        "key": "receiveremails_doctorsnote_cc"
+    },
+    {
+        "type": "string",
+        "title": "receiver email doctorsnote",
+        "desc": "comma separated email addresses of receivers, e.g. krankmeldung@kkos.net,jane@school.com",
+        "section": "emailconfig",
+        "key": "receiveremails_doctorsnote"
+    },
+    {
+        "type": "string",
+        "title": "receiver email lunch",
+        "desc": "comma separated email addresses of receivers for the lunch cancelling email",
+        "section": "emailconfig",
+        "key": "receiveremails_lunch"
+    },
+    {
+        "type": "string",
+        "title": "smtp server",
+        "desc": "specify your smtp server, e.g. smtp.ionos.de if you using ionos",
+        "section": "emailconfig",
+        "key": "smtpserver"
+    },
+    {
+        "type": "numeric",
+        "title": "port",
+        "desc": "specify port for your smtp server, usually 587 or 465",
+        "section": "emailconfig",
+        "key": "port"
+    },
+    {
+        "type": "string",
+        "title": "child's name",
+        "desc": "the name of the kid you are sending the note for",
+        "section": "kid",
+        "key": "kidname"
+    },
+    {
+        "type": "string",
+        "title": "grade and class",
+        "desc": "the name of the kids class, e.g. 8.4",
+        "section": "kid",
+        "key": "classid"
+    },
+    {
+        "type": "string",
+        "title": "sender name",
+        "desc": "your name",
+        "section": "sender",
+        "key": "sendername"
+    },
+    {
+        "type": "password",
+        "title": "password",
+        "desc": "password for smtp server",
+        "section": "sender",
+        "key": "passwd"
+    },
+    {
+        "type": "numeric",
+        "title": "app settings",
+        "desc": "infos about app usage",
+        "section": "app",
+        "key": "first_use"
+    },
+    {
+        "type": "numeric",
+        "title": "show startup screen",
+        "desc": "0 to switch it on and 1 to switch it off",
+        "section": "app",
+        "key": "show_startup"
+    }
+]
