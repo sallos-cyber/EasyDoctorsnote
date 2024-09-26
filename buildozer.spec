@@ -426,7 +426,7 @@ log_level = 1
 warn_on_root = 1
 
 # (str) Path to build artifact storage, absolute or relative to spec file
-build_dir = /media/Data/email_project_apk
+# build_dir = 
 
 # (str) Path to build output (i.e. .apk, .aab, .ipa) storage
 bin_dir = ./bin
