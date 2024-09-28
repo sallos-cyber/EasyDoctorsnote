@@ -3,12 +3,9 @@ An App that eases the process of sending a doctor's note to school. Uses smtp us
 
 This project is built on the kivy framework using an MVVM pattern and uses buildozer for packaging an apk file. 
 
-todo: in buildozer.spec # (str) Path to build artifact storage, absolute or relative to spec file
- build_dir = /media/Data/
-
 
 Project Title:
-DoctorsNote
+EasyDoctorsnote
 
 
 
@@ -20,7 +17,7 @@ date range and automatically send the necessary emails. To use the app,
 you'll need to configure it with an SMTP server and a password. 
 It does not access any information on your phone.
 
-
+![Alt text](./images/Main_Screen.png)
 Table of Contents
 About
 This app is written in Python using Kivy.
