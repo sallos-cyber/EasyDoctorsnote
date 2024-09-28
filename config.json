@@ -70,6 +70,13 @@
         "key": "passwd"
     },
     {
+        "type": "string",
+        "title": "language",
+        "desc": "set to English or German",
+        "section": "app",
+        "key": "language"
+    },
+    {
         "type": "numeric",
         "title": "app settings",
         "desc": "infos about app usage",

@@ -61,8 +61,8 @@ class MainScreen(MDScreen):
         
 
         
-class DoctorsnoteApp(MDApp):
-    email_receiver_doctors_note = ConfigParserProperty('defaultvale','emailconfig','receiveremails_doctorsnote','configparser')
+class EasyDoctorsnoteApp(MDApp):
+    email_receiver_doctors_note = ConfigParserProperty('defaultvalue','emailconfig','receiveremails_doctorsnote','configparser')
 
     config = ObjectProperty(None) 
     
@@ -84,6 +84,9 @@ class DoctorsnoteApp(MDApp):
             'first_use':'1'})
         config.setdefaults( 'app',{
             'show_startup': 0})
+        config.setdefaults( 'app',{
+            'language': 'German'})
+
 
     
     def build(self):
@@ -105,7 +108,7 @@ class DoctorsnoteApp(MDApp):
 
         model = DataModel()
         view_model = ViewModel(model, self.pw_handler, self.config)
-        Logger.debug(f'DoctorsnoteApp: builder, {self.show_startup()=}')
+        Logger.debug(f'EasyDoctorsnoteApp: builder, {self.show_startup()=}')
         self.screen_manager = ScreenManagement(view_model, self.show_startup())
 
         # Return the screen manager as the root widget
@@ -115,7 +118,7 @@ class DoctorsnoteApp(MDApp):
         
     def on_config_change(self, config, section, key, value):
         if key == 'passwd':
-            Logger.debug('DoctorsnoteApp: on_config_change, the user has changed the password!')
+            Logger.debug('EasyDoctorsnoteApp: on_config_change, the user has changed the password!')
             # Ensure 'value' is in bytes
             # if isinstance(value, str):
             #     value = value.encode('utf-8')  # Convert string to bytes
@@ -163,7 +166,7 @@ class DoctorsnoteApp(MDApp):
 
     
 if __name__=='__main__':
-    DoctorsnoteApp().run()
+    EasyDoctorsnoteApp().run()
     
 
 class AnotherScreen(MDScreen):

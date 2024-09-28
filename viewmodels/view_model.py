@@ -240,7 +240,7 @@ class ViewModel(EventDispatcher):
 
         if email_indicator=="doctorsnote":
             #self.model.send_doctors_note = False # this might raise a problem when the back button is pressed
-            email_doctors_note = self.email_handler.create_doctors_note_email(self.config['emailconfig']['senderemail'], 
+            email_doctors_note = self.email_handler.create_doctors_note_email(self.config['app']['language'],self.config['emailconfig']['senderemail'], 
                                           self.config['emailconfig']['receiveremails_doctorsnote'],
                                           self.config['emailconfig']['receiveremails_doctorsnote_cc'],
                                           self.config['sender']['sendername'],
@@ -254,7 +254,7 @@ class ViewModel(EventDispatcher):
        
         if email_indicator=="cancel_lunch":
             #self.model.cancel_lunch = False
-            cancel_lunch_note = self.email_handler.create_cancel_lunch_email(self.config['emailconfig']['senderemail'], 
+            cancel_lunch_note = self.email_handler.create_cancel_lunch_email(self.config['app']['language'],self.config['emailconfig']['senderemail'], 
                                           self.config['emailconfig']['receiveremails_lunch'],
                                           self.config['sender']['sendername'],
                                           self.config['kid']['kidname'],
