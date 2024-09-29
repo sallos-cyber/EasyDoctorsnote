@@ -27,5 +27,9 @@ class PasswordHandler:
 
     def decrypt_password(self, encrypted_password):
         f = Fernet(self.key)
-        decrypted_password = f.decrypt(encrypted_password.encode('utf-8')).decode()
-        return decrypted_password
+        try: 
+            decrypted_password = f.decrypt(encrypted_password).decode('utf-8')
+            return decrypted_password
+        except Exception as e:
+            Logger.error(f'PasswordHandler: decrypt_password, error occurred: {e}')
+            return None
