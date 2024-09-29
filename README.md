@@ -24,18 +24,18 @@ If you just want to download the APK file to your Android phone, please follow t
 
 ## Installation
 1) Create the conda environment from the environment.yml to make sure you have all the required packages:
-   conda env create -f environment.yml
+   'conda env create -f environment.yml'
 2) Activate the newly created environment called easy_doctorsnote:
-   conda activate easy_doctorsnote
+   'conda activate easy_doctorsnote'
 3) If you want to test the program on your computer, you can do:
-   python main.py
+   'python main.py'
 4) To build the app for an Android phone (an APK file), run:
-   buildozer -v android debug
-   This will create the APK file in the bin directory.
-5) If you have ADB installed on your phone and the phone is connected to your computer, you can now run:
-   adb install bin/*.apk
-6) For debugging the app, you can use:
-   adb logcat | grep python
+   'buildozer -v android debug'
+   This will create a directory called 'bin' and inside the APK file.
+7) If you have ADB installed on your phone and the phone is connected to your computer, you can now run:
+   'adb install bin/*.apk'
+8) For debugging the app, you can use:
+   'adb logcat | grep python'
 
 ## Usage
 Before the first use, you need to fill in the required information in the configuration panel. In addition to the SMTP
