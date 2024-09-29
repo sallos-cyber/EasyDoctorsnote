@@ -6,7 +6,7 @@ from kivy.properties import ObjectProperty, StringProperty, NumericProperty
 class ShowEmailScreen(MDScreen):
     
     view_model = ObjectProperty(None)
-    emailtext_to_be_displayed = StringProperty("keine Email")
+    emailtext_to_be_displayed = StringProperty("no email")
     email_curr = ObjectProperty()
     email_curr_index = NumericProperty()
 
@@ -22,5 +22,3 @@ class ShowEmailScreen(MDScreen):
         
     def get_current_email_text(self, instance, email_text):
         self.emailtext_to_be_displayed = email_text       
-           # -*- coding: utf-8 -*-
-
