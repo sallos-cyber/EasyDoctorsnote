@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# PyCharm
+.idea/
+*.iml
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Test and coverage
+.coverage
+.coverage.*
+nosetests.xml
+test-results/
+*.log
+
+# Miscellaneous
+*.DS_Store
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+*.pid
+*.seed
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.tar.bz2
+*.tgz
+*.gz
+*.bz2
+*.7z
+*.rar
+*.xz
+*.xz
+*.tgz
+*.egg
+*.whl
+
