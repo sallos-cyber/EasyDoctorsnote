@@ -1,3 +1,5 @@
+from kivymd.uix.screen import MDScreen
+
 class MainScreen(MDScreen):
     """
     Represents the main screen of the app.
@@ -7,3 +9,4 @@ class MainScreen(MDScreen):
     def __init__(self, view_model, **kwargs):
         super().__init__(**kwargs)
         self.view_model = view_model
+
