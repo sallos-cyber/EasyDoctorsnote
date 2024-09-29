@@ -6,7 +6,6 @@ from utils.email_handler import EmailHandler
 from kivy.logger import Logger
 from kivymd.app import MDApp
 from datetime import date
-#from main import DoctorsnoteApp
 from typing import Optional, Tuple
 from email.message import EmailMessage    
 
