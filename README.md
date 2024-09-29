@@ -18,7 +18,9 @@ you'll need to configure it with an SMTP server and a password.
 It does not access any information on your phone.
 This app uses conda
 
-![Alt text](./images/Main_Screen.png)
+![Alt text](./images/main_screen_small.png)
+![Alt text](./images/pick_date_small.png)
+![Alt text](./images/doctors_note_small.png)
 Download:
 If you just want to download the apk file to your android phone:
 todo
