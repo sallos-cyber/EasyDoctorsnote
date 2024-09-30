@@ -1,4 +1,7 @@
 # EasyDoctorsnote
+
+![Alt text](./resources/icon_small.png)
+
 An app that simplifies the process of sending a doctor's note to school. It uses SMTP with a username and password.
 Note: OAuth has not yet been implemented.
 
@@ -12,15 +15,15 @@ To use the app, you'll need to configure it with an SMTP server and a password. 
 ![Alt text](./images/doctors_note_small.png)
 
 ## Features
-This project is built on the Kivy framework using the MVVM pattern and utilizes Buildozer for packaging an APK file. It does 
-not access any information on your phone.
+This project is built on the [Kivy](https://kivy.org/) framework following an MVVM pattern and utilizes [Buildozer](https://github.com/kivy/buildozer) for packaging an APK file. It does 
+not access any information on your phone. It assumes the use of [Conda](https://docs.conda.io/en/latest/).
 
 ## Download 
 If you just want to download the APK file to your Android phone, please follow the instructions (to be added).
 
 ## Prerequisites
 - An email provider that allows sending emails using a username and password.
-- KivyMD version 2.0.1.dev0.
+- [KivyMD](https://github.com/kivymd/KivyMD) version 2.0.1.dev0.
 
 ## Installation
 1) Create the conda environment from the environment.yml to make sure you have all the required packages:
