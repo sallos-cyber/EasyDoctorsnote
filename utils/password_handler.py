@@ -23,11 +23,16 @@ class PasswordHandler:
         Logger.debug(f'PasswordHandler: encrypt_password, this is the current folder: {os.getcwd()}')
         f = Fernet(self.key)
         encrypted_password = f.encrypt(password.encode('utf-8'))
+
         return encrypted_password
 
     def decrypt_password(self, encrypted_password):
         f = Fernet(self.key)
-        try: 
+
+        if isinstance(encrypted_password, str):
+            encrypted_password = encrypted_password.encode('utf-8')
+        try:
+            #f.decrypt returns bytes. In order to convert this to a string you use b.decode
             decrypted_password = f.decrypt(encrypted_password).decode('utf-8')
             return decrypted_password
         except Exception as e:
